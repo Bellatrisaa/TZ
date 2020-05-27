@@ -39,7 +39,7 @@ void list::push(size_t length, unsigned char* array, size_t start, size_t finish
 		head->word = new unsigned char[length];
 		head->length = length;
 		size_t i = 0;
-		for (start; start < finish; start++)
+		for (start = start; start < finish; start++)
 		{
 			head->word[i] = array[start];
 			i++;
@@ -54,7 +54,7 @@ void list::push(size_t length, unsigned char* array, size_t start, size_t finish
 		ptr->word = new unsigned char[length];
 		ptr->length = length;
 		size_t i = 0;
-		for (start; start < finish; start++)
+		for (start = start; start < finish; start++)
 		{
 			ptr->word[i] = array[start];
 			i++;
@@ -126,7 +126,7 @@ void list::printList()
 void list::listtofile()
 {
 	std::ofstream outputFile;
-	outputFile.open("../output.txt");
+	outputFile.open("output.txt");
 	Node* ptr = head;
 	while (ptr != NULL)
 	{
