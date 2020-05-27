@@ -126,7 +126,7 @@ void list::printList()
 void list::listtofile()
 {
 	std::ofstream outputFile;
-	outputFile.open("output.txt");
+	outputFile.open("../output.txt");
 	Node* ptr = head;
 	while (ptr != NULL)
 	{
