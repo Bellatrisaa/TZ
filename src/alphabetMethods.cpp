@@ -1,4 +1,3 @@
-
 #include "alphabet.h"
 
 Alphabet::Alphabet(const char *name)
@@ -16,4 +15,26 @@ Alphabet::~Alphabet()
 	delete[] buffer;
 }
 
+void Alphabet::openisfile()
+{
+	if (inputText.is_open())
+	{
+		std::cout << "FILE IS OPEN" << std::endl;
+	}
+	else
+	{
+		std::cout << "FILE IS NOT OPEN" << std::endl;
+	}
+}
 
+void Alphabet::openisfile()
+{
+	if (inputText.is_open())
+	{
+		std::cout << "FILE IS OPEN" << std::endl;
+	}
+	else
+	{
+		std::cout << "FILE IS NOT OPEN" << std::endl;
+	}
+}
