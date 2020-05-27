@@ -1,4 +1,7 @@
 #include "alphabet.h"
+#include "tools.h"
+#include <iostream>
+#include <fstream>
 
 Alphabet::Alphabet(const char *name)
 {
