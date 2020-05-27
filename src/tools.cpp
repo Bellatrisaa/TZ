@@ -22,3 +22,13 @@ bool IsItLetter(unsigned char& sym)
 {
 	return ((192 <= (int)sym and (int)sym <= 255) or ((int)sym == 184) or ((int)sym == 168));
 }
+
+size_t countsymbols(size_t& len, unsigned char* sym, size_t i, size_t lengthStrMax)
+{
+	while (IsItLetter(sym[i]) and i < lengthStrMax)
+	{
+		len++;
+		i++;                                                             
+	}
+	return i;
+}
