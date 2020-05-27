@@ -9,3 +9,8 @@ struct list::Node
 	size_t length;            
 	Node* next;
 };
+
+list::list()
+{
+	head = NULL;  
+}
