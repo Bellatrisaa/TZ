@@ -13,4 +13,5 @@ public:
 	~Alphabet();
 	
 	void openisfile();
+	void printfile();
 }
