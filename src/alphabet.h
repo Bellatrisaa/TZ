@@ -12,9 +12,5 @@ public:
 	Alphabet(const char* name);
 	~Alphabet();
 	
-	/*
-	*
-	*        Methods 
-	*
-	*/
+	void openisfile();
 }
