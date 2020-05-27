@@ -66,3 +66,24 @@ void Alphabet::printarray()
 		std::cout << "ERROR ARRAY IS ENPTY\n";
 	}
 }
+
+void Alphabet::deletepuncmark()
+{
+	if (buffer != NULL)
+	{
+		for (iBuff = 0; iBuff < lengthStrMax; iBuff++)
+		{
+			if (IsItLetter(buffer[iBuff]))
+			{
+				iWork = iBuff;
+				iBuff = countsymbols(lengthWord, buffer, iWork, lengthStrMax);
+				lwords.push(lengthWord, buffer, iWork, iBuff);
+				lengthWord = 0;
+			}
+		}
+	}
+	else
+	{
+		std::cout << "Massive is empty\n";
+	}
+}
