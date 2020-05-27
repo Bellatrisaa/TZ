@@ -9,7 +9,7 @@ class Alphabet
 	unsigned char *buffer;
 	char sym;
 	size_t lengthStrMax, iBuff, iWork, lengthWord;
-	list lword;
+	list lwords;
 public:
 	Alphabet(const char* name);
 	~Alphabet();
