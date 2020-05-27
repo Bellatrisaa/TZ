@@ -122,3 +122,20 @@ void list::printList()
 		ptr = ptr->next;
 	}
 }
+
+void list::listtofile()
+{
+	std::ofstream outputFile;
+	outputFile.open("output.txt");
+	Node* ptr = head;
+	while (ptr != NULL)
+	{
+		for (size_t i = 0; i < ptr->length; i++)
+		{
+			outputFile.put(ptr->word[i]);                
+		}
+		outputFile.put('\n');
+		ptr = ptr->next;
+	}
+	outputFile.close();
+}
