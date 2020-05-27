@@ -107,3 +107,18 @@ void list::sort_alphabet()
 	}
 	head = new_head;
 }
+
+void list::printList()
+{
+	Node* ptr = head;
+	while (ptr != NULL)
+	{
+		for (size_t i = 0; i < ptr->length; i++)
+		{
+			std::cout << ptr->word[i];               
+		}
+		Sleep(1000);
+		std::cout << std::endl;
+		ptr = ptr->next;
+	}
+}
