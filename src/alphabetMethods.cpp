@@ -27,18 +27,6 @@ void Alphabet::openisfile()
 	}
 }
 
-void Alphabet::openisfile()
-{
-	if (inputText.is_open())
-	{
-		std::cout << "FILE IS OPEN" << std::endl;
-	}
-	else
-	{
-		std::cout << "FILE IS NOT OPEN" << std::endl;
-	}
-}
-
 void Alphabet::printfile()
 {
 	while (inputText.get(sym))
