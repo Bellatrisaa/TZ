@@ -1,5 +1,6 @@
 #pragma once
 #include <fstream>
+#include "singleList.h"
 
 class Alphabet
 {
@@ -8,6 +9,7 @@ class Alphabet
 	unsigned char *buffer;
 	char sym;
 	size_t lengthStrMax, iBuff, iWork, lengthWord;
+	list lwords;
 public:
 	Alphabet(const char* name);
 	~Alphabet();

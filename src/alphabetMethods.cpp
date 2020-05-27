@@ -12,7 +12,6 @@ Alphabet::Alphabet(const char *name)
 	iBuff = 0;                       
 	lengthWord = 0;
 	iWork = 0;
-	list lwords;
 }
 
 Alphabet::~Alphabet()
