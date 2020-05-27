@@ -38,3 +38,11 @@ void Alphabet::openisfile()
 		std::cout << "FILE IS NOT OPEN" << std::endl;
 	}
 }
+
+void Alphabet::printfile()
+{
+	while (inputText.get(sym))
+	{
+		std::cout << sym;
+	}
+}
