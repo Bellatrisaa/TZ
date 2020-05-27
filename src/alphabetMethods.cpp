@@ -1,4 +1,5 @@
 #include "alphabet.h"
+#include "singleList.h"
 #include "tools.h"
 #include <iostream>
 #include <fstream>
@@ -11,6 +12,7 @@ Alphabet::Alphabet(const char *name)
 	iBuff = 0;                       
 	lengthWord = 0;
 	iWork = 0;
+	list lwords;
 }
 
 Alphabet::~Alphabet()
