@@ -88,3 +88,23 @@ void Alphabet::deletepuncmark()
 		std::cout << "Massive is empty\n";
 	}
 }
+
+void Alphabet::tolower_()
+{
+lwords.tolower_();
+}
+
+void Alphabet::sort()
+{
+lwords.sort_alphabet();
+}
+
+void Alphabet::show()
+{
+lwords.printList();
+}
+
+void Alphabet::tofile()
+{
+lwords.listtofile();
+}
