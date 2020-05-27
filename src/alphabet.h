@@ -14,4 +14,6 @@ public:
 	
 	void openisfile();
 	void printfile();
+	void filetoarray();
+	void printarray();
 }
