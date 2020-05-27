@@ -48,3 +48,18 @@ void Alphabet::filetoarray()
 	returntostart(inputText);
 	inputText.close();
 }
+
+void Alphabet::printarray()
+{
+	if (buffer != NULL)
+	{
+		for (iBuff = 0; iBuff < lengthStrMax; iBuff++)
+		{
+			std::cout << buffer[iBuff];
+		}
+	}
+	else
+	{
+		std::cout << "ERROR ARRAY IS ENPTY\n";
+	}
+}
