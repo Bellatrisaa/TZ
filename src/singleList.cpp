@@ -78,3 +78,32 @@ void list::tolower_()
 		ptr = ptr->next;
 	}
 }
+
+void list::sort_alphabet()
+{
+	Node* new_head = NULL;
+
+	while (head != NULL)
+	{
+		Node* node = head;
+		head = head->next;
+
+		if (new_head == NULL || strcmp((char*)node->word, (char*)new_head->word) < 0)
+		{
+			node->next = new_head;
+			new_head = node;                                                            
+		}
+		else
+		{
+			Node* current = new_head;
+			while (current->next != NULL && strcmp((char*)node->word, (char*)current->next->word) > 0)
+			{
+				current = current->next;
+			}
+
+			node->next = current->next;
+			current->next = node;
+		}
+	}
+	head = new_head;
+}
