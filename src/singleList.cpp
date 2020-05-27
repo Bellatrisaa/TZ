@@ -64,3 +64,17 @@ void list::push(size_t length, unsigned char* array, size_t start, size_t finish
 		pred->next = NULL;
 	}
 }
+
+void list::tolower_()
+{
+	Node* ptr = head;
+
+	while (ptr != NULL)
+	{
+		for (size_t i = 0; i < ptr->length; i++)
+		{                                                   
+			ptr->word[i] = tolower(ptr->word[i]);
+		}
+		ptr = ptr->next;
+	}
+}
