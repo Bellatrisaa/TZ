@@ -23,5 +23,5 @@ public:
 	void tolower_();
 	void sort();
 	void show();
-	void tofile();
+	void tofile(const char *name);
 };
