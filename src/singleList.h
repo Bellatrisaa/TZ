@@ -14,9 +14,9 @@ public:
 	void tolower_();
 	void sort_alphabet();
 	void printList();
-	void listtofile();
+	void listtofile(const char *name);
 
 private:
-	Node* pred; /*”казатель на предыдущий элемент*/
-	Node* head; /*”казатель на начало списка*/
+	Node* pred; 
+	Node* head; 
 };
