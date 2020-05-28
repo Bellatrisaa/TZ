@@ -123,10 +123,10 @@ void list::printList()
 	}
 }
 
-void list::listtofile()
+void list::listtofile(const char *name)
 {
 	std::ofstream outputFile;
-	outputFile.open("output.txt");
+	outputFile.open(name);
 	Node* ptr = head;
 	while (ptr != NULL)
 	{
