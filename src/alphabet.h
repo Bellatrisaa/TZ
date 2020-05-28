@@ -17,6 +17,7 @@ public:
 	void openisfile();
 	void printfile();
 	void filetoarray();
+	unsigned char *getPtrBuffer();
 	void printarray();
 	void deletepuncmark();
 	void tolower_();
