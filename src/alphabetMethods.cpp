@@ -106,5 +106,5 @@ lwords.printList();
 
 void Alphabet::tofile()
 {
-lwords.listtofile();
+lwords.listtofile("output.txt");
 }
