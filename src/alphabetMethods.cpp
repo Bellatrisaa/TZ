@@ -53,6 +53,11 @@ void Alphabet::filetoarray()
 	inputText.close();
 }
 
+unsigned char* Alphabet::getPtrBuffer()
+{
+	return buffer;
+}
+
 void Alphabet::printarray()
 {
 	if (buffer != NULL)
