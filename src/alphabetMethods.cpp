@@ -109,7 +109,7 @@ void Alphabet::show()
 lwords.printList();
 }
 
-void Alphabet::tofile()
+void Alphabet::tofile(const char *name)
 {
-lwords.listtofile("output.txt");
+lwords.listtofile(name);
 }
