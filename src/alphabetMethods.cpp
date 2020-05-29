@@ -1,115 +1,101 @@
 #include "alphabet.h"
-#include "singleList.h"
+#include "singlelist.h"
 #include "tools.h"
-#include <iostream>
 #include <fstream>
+#include <iostream>
 
-Alphabet::Alphabet(const char *name)
+alphabet::alphabet(const char* name)
 {
-	inputText.open(name);
-	buffer = NULL;
-	lengthStrMax = 0;
-	iBuff = 0;                       
-	lengthWord = 0;
-	iWork = 0;
+    inputtext.open(name);
+    buffer = null;
+    lengthstrmax = 0;
+    ibuff = 0;
+    lengthword = 0;
+    iwork = 0;
 }
 
-Alphabet::~Alphabet()
+alphabet::~alphabet()
 {
-	delete[] buffer;                
+    delete[] buffer;
 }
 
-void Alphabet::openisfile()
+void alphabet::openisfile()
 {
-	if (inputText.is_open())
-	{
-		std::cout << "FILE IS OPEN" << std::endl;
-	}
-	else
-	{
-		std::cout << "FILE IS NOT OPEN" << std::endl;
-	}
+    if (inputtext.is_open()) {
+        std::cout << "file is open" << std::endl;
+    } else {
+        std::cout << "file is not open" << std::endl;
+    }
 }
 
-void Alphabet::printfile()
+void alphabet::printfile()
 {
-	while (inputText.get(sym))
-	{
-		std::cout << sym;
-	}
+    while (inputtext.get(sym)) {
+        std::cout << sym;
+    }
 }
 
-void Alphabet::filetoarray()
+void alphabet::filetoarray()
 {
-	countsymbols(inputText, lengthStrMax);
-	buffer = new unsigned char[lengthStrMax];
-	while (inputText.get((char&)sym) and iBuff < lengthStrMax)
-	{
-		buffer[iBuff] = sym;
-		iBuff++;
-	}
-	iBuff = 0;
-	returntostart(inputText);
-	inputText.close();
+    countsymbols(inputtext, lengthstrmax);
+    buffer = new unsigned char[lengthstrmax];
+    while (inputtext.get((char&)sym) and ibuff < lengthstrmax) {
+        buffer[ibuff] = sym;
+        ibuff++;
+    }
+    ibuff = 0;
+    returntostart(inputtext);
+    inputtext.close();
 }
 
-unsigned char* Alphabet::getPtrBuffer()
+unsigned char* alphabet::getptrbuffer()
 {
-	return buffer;
+    return buffer;
 }
 
-void Alphabet::printarray()
+void alphabet::printarray()
 {
-	if (buffer != NULL)
-	{
-		for (iBuff = 0; iBuff < lengthStrMax; iBuff++)
-		{
-			std::cout << buffer[iBuff];
-		}
-	}
-	else
-	{
-		std::cout << "ERROR ARRAY IS ENPTY\n";
-	}
+    if (buffer != null) {
+        for (ibuff = 0; ibuff < lengthstrmax; ibuff++) {
+            std::cout << buffer[ibuff];
+        }
+    } else {
+        std::cout << "error array is enpty\n";
+    }
 }
 
-void Alphabet::deletepuncmark()
+void alphabet::deletepuncmark()
 {
-	if (buffer != NULL)
-	{
-		for (iBuff = 0; iBuff < lengthStrMax; iBuff++)
-		{
-			if (IsItLetter(buffer[iBuff]))
-			{
-				iWork = iBuff;
-				iBuff = countsymbols(lengthWord, buffer, iWork, lengthStrMax);
-				lwords.push(lengthWord, buffer, iWork, iBuff);
-				lengthWord = 0;
-			}
-		}
-	}
-	else
-	{
-		std::cout << "Massive is empty\n";
-	}
+    if (buffer != null) {
+        for (ibuff = 0; ibuff < lengthstrmax; ibuff++) {
+            if (isitletter(buffer[ibuff])) {
+                iwork = ibuff;
+                ibuff = countsymbols(lengthword, buffer, iwork, lengthstrmax);
+                lwords.push(lengthword, buffer, iwork, ibuff);
+                lengthword = 0;
+            }
+        }
+    } else {
+        std::cout << "massive is empty\n";
+    }
 }
 
-void Alphabet::tolower_()
+void alphabet::tolower_()
 {
-lwords.tolower_();
+    lwords.tolower_();
 }
 
-void Alphabet::sort()
+void alphabet::sort()
 {
-lwords.sort_alphabet();
+    lwords.sort_alphabet();
 }
 
-void Alphabet::show()
+void alphabet::show()
 {
-lwords.printList();
+    lwords.printlist();
 }
 
-void Alphabet::tofile(const char *name)
+void alphabet::tofile(const char* name)
 {
-lwords.listtofile(name);
+    lwords.listtofile(name);
 }

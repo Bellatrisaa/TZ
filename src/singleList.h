@@ -1,22 +1,19 @@
 #pragma once
 
-/*SingleList*/
-
-class list
-{
-	struct Node;
+class list {
+    struct Node;
 
 public:
-	list();
-	~list();
+    list();
+    ~list();
 
-	void push(size_t length, unsigned char* array, size_t start, size_t finish);
-	void tolower_();
-	void sort_alphabet();
-	void printList();
-	void listtofile(const char *name);
+    void push(size_t length, unsigned char* array, size_t start, size_t finish);
+    void tolower_();
+    void sort_alphabet();
+    void printList();
+    void listtofile(const char* name);
 
 private:
-	Node* pred; 
-	Node* head; 
+    Node* pred;
+    Node* head;
 };
