@@ -7,7 +7,7 @@ TEST_CASE(
         "Method deletepuncmark: delete all puncmarks in string",
         "File: method_deletepuncmark_test.cpp")
 {
-    Alphabet test("test/alphabet_methods_test/test_txt_files/test_2.1.txt");
+    alphabet test("test/alphabet_methods_test/test_txt_files/test_2.1.txt");
     test.filetoarray();
     test.deletepuncmark();
     test.tofile("test/alphabet_methods_test/test_txt_files/test_2.2.txt");
@@ -17,7 +17,7 @@ TEST_CASE(
     char word[8];
     text.getline(word, 8);
 
-    REQUIRE(strcmp(word, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ") == 0);
+    REQUIRE(strcmp(word, "алфавит") == 0);
     text.close();
 }
 
@@ -25,7 +25,7 @@ TEST_CASE(
         "Method deletepuncmark: delete all special chars in string",
         "File: method_deletepuncmark_test.cpp")
 {
-    Alphabet test("test/alphabet_methods_test/test_txt_files/test_2.3.txt");
+    alphabet test("test/alphabet_methods_test/test_txt_files/test_2.3.txt");
     test.filetoarray();
     test.deletepuncmark();
     test.tofile("test/alphabet_methods_test/test_txt_files/test_2.4.txt");
@@ -35,7 +35,7 @@ TEST_CASE(
     char word[8];
     text.getline(word, 8);
 
-    REQUIRE(strcmp(word, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ") == 0);
+    REQUIRE(strcmp(word, "алфавит") == 0);
     text.close();
 }
 
@@ -43,7 +43,7 @@ TEST_CASE(
         "Method deletepuncmark: delete all digits in string",
         "File: method_deletepuncmark_test.cpp")
 {
-    Alphabet test("test/alphabet_methods_test/test_txt_files/test_2.5.txt");
+    alphabet test("test/alphabet_methods_test/test_txt_files/test_2.5.txt");
     test.filetoarray();
     test.deletepuncmark();
     test.tofile("test/alphabet_methods_test/test_txt_files/test_2.6.txt");
@@ -53,7 +53,7 @@ TEST_CASE(
     char word[8];
     text.getline(word, 8);
 
-    REQUIRE(strcmp(word, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ") == 0);
+    REQUIRE(strcmp(word, "алфавит") == 0);
     text.close();
 }
 
@@ -61,7 +61,7 @@ TEST_CASE(
         "Method deletepuncmark: delete all english letters in string",
         "File: method_deletepuncmark_test.cpp")
 {
-    Alphabet test("test/alphabet_methods_test/test_txt_files/test_2.7.txt");
+    alphabet test("test/alphabet_methods_test/test_txt_files/test_2.7.txt");
     test.filetoarray();
     test.deletepuncmark();
     test.tofile("test/alphabet_methods_test/test_txt_files/test_2.8.txt");
@@ -71,6 +71,6 @@ TEST_CASE(
     char word[8];
     text.getline(word, 8);
 
-    REQUIRE(strcmp(word, "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ") == 0);
+    REQUIRE(strcmp(word, "алфавит") == 0);
     text.close();
 }

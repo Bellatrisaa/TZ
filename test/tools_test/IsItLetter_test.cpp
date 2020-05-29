@@ -5,9 +5,9 @@ TEST_CASE(
         "Test function IsItLetter() if enter the russian letter",
         "File: IsItLetter_test.cpp")
 {
-    unsigned char letter = 'ï¿½';
+    unsigned char letter = 'à';
 
-    REQUIRE(IsItLetter(letter) == 1);
+    REQUIRE(isitletter(letter) == 1);
 }
 
 TEST_CASE(
@@ -16,7 +16,7 @@ TEST_CASE(
 {
     unsigned char eng_letter = 'a';
 
-    REQUIRE(IsItLetter(eng_letter) == 0);
+    REQUIRE(isitletter(eng_letter) == 0);
 }
 
 TEST_CASE(
@@ -25,7 +25,7 @@ TEST_CASE(
 {
     unsigned char digit = '1';
 
-    REQUIRE(IsItLetter(digit) == 0);
+    REQUIRE(isitletter(digit) == 0);
 }
 
 TEST_CASE(
@@ -34,16 +34,16 @@ TEST_CASE(
 {
     unsigned char spec_char = '#';
 
-    REQUIRE(IsItLetter(spec_char) == 0);
+    REQUIRE(isitletter(spec_char) == 0);
 }
 
 SCENARIO("The string includes 5 russian letters")
 {
-    unsigned char string[] = "ï¿½ï¿½4  %@U  Dï¿½ï¿½  !&?  -ï¿½";
+    unsigned char string[] = "?à4  %@U  Dïô  !&å  -ð";
     int counter = 0;
 
     for (int i = 0; i < 22; i++) {
-        if (IsItLetter(string[i])) {
+        if (isitletter(string[i])) {
             counter++;
         }
     }

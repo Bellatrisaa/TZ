@@ -7,8 +7,8 @@ TEST_CASE(
         "Method sort_alphabet: sort of two words",
         "File: method_sort_alphabet.cpp")
 {
-    unsigned char word1[] = "пїЅпїЅпїЅпїЅ";
-    unsigned char word2[] = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ";
+    unsigned char word1[] = "быть";
+    unsigned char word2[] = "алфавит";
     list test_list;
 
     test_list.push(4, word1, 0, 4);

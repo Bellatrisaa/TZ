@@ -6,7 +6,7 @@ TEST_CASE(
         "Test function size_t countsymbols(): word length counting",
         "File: sizet_countsymbols_test.cpp")
 {
-    unsigned char string[] = "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ";
+    unsigned char string[] = "павпп авыаыв ава";
     size_t length_1 = 0, length_2 = 0, length_3 = 0;
 
     countsymbols(length_1, string, 0, 16);
@@ -36,7 +36,7 @@ TEST_CASE(
         "Test function size_t countsymbols(): index permutation",
         "File: sizet_countsymbols_test.cpp")
 {
-    unsigned char string[] = "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ";
+    unsigned char string[] = "авыао ваыаы апра";
     size_t index = 0, length_1 = 0, length_2 = 0, length_3 = 0;
 
     index = countsymbols(length_1, string, 0, 16);
@@ -54,7 +54,7 @@ TEST_CASE(
         "first character is not a russian letter",
         "File: sizet_countsymbols_test.cpp")
 {
-    unsigned char string[] = "@пїЅпїЅпїЅпїЅпїЅ aпїЅпїЅпїЅпїЅпїЅпїЅ +пїЅпїЅпїЅпїЅпїЅпїЅ";
+    unsigned char string[] = "dвыфвр 4авыава !вааааа";
     size_t index = 0, length_1 = 0, length_2 = 0, length_3 = 0;
 
     index = countsymbols(length_1, string, 0, 22);
@@ -72,7 +72,7 @@ TEST_CASE(
         "first character is a russian letter",
         "File: sizet_countsymbols_test.cpp")
 {
-    unsigned char string[] = "пїЅ#aпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ*пїЅпїЅпїЅпїЅпїЅ пїЅ&gfgf";
+    unsigned char string[] = "ф5445455r аfghdre шfdd";
     size_t index = 0, length_1 = 0, length_2 = 0, length_3 = 0;
 
     index = countsymbols(length_1, string, 0, 22);

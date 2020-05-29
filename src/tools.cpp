@@ -17,7 +17,7 @@ void countsymbols(std::ifstream& file, size_t& len)
     returntostart(file);
 }
 
-bool IsItLetter(unsigned char& sym)
+bool isitletter(unsigned char& sym)
 {
     return ((192 <= (int)sym and (int) sym <= 255) or ((int)sym == 184)
             or ((int)sym == 168));
@@ -26,7 +26,7 @@ bool IsItLetter(unsigned char& sym)
 size_t
 countsymbols(size_t& len, unsigned char* sym, size_t i, size_t lengthStrMax)
 {
-    while (IsItLetter(sym[i]) and i < lengthStrMax) {
+    while (isitletter(sym[i]) and i < lengthStrMax) {
         len++;
         i++;
     }

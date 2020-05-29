@@ -10,7 +10,7 @@ TEST_CASE(
         "File: method_tolower_test.cpp")
 {
     setlocale(LC_ALL, "RUS");
-    unsigned char letter[] = "О©╫";
+    unsigned char letter[] = "ю";
     list test_list;
 
     test_list.push(1, letter, 0, 1);
@@ -31,7 +31,7 @@ TEST_CASE(
         "File: method_tolower_test.cpp")
 {
     setlocale(LC_ALL, "RUS");
-    unsigned char letter[] = "О©╫О©╫О©╫О©╫О©╫О©╫О©╫";
+    unsigned char letter[] = "юктюбхр";
     list test_list;
 
     test_list.push(7, letter, 0, 7);

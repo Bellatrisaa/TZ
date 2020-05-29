@@ -7,7 +7,7 @@
 alphabet::alphabet(const char* name)
 {
     inputtext.open(name);
-    buffer = null;
+    buffer = nullptr;
     lengthstrmax = 0;
     ibuff = 0;
     lengthword = 0;
@@ -55,7 +55,7 @@ unsigned char* alphabet::getptrbuffer()
 
 void alphabet::printarray()
 {
-    if (buffer != null) {
+    if (buffer != nullptr) {
         for (ibuff = 0; ibuff < lengthstrmax; ibuff++) {
             std::cout << buffer[ibuff];
         }
@@ -66,7 +66,7 @@ void alphabet::printarray()
 
 void alphabet::deletepuncmark()
 {
-    if (buffer != null) {
+    if (buffer != nullptr) {
         for (ibuff = 0; ibuff < lengthstrmax; ibuff++) {
             if (isitletter(buffer[ibuff])) {
                 iwork = ibuff;
@@ -92,7 +92,7 @@ void alphabet::sort()
 
 void alphabet::show()
 {
-    lwords.printlist();
+    lwords.printList();
 }
 
 void alphabet::tofile(const char* name)

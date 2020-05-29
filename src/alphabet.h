@@ -2,22 +2,22 @@
 #include "singleList.h"
 #include <fstream>
 
-class Alphabet {
-    std::ifstream inputText;
-    std::ofstream outputText;
+class alphabet {
+    std::ifstream inputtext;
+    std::ofstream outputtext;
     unsigned char* buffer;
     char sym;
-    size_t lengthStrMax, iBuff, iWork, lengthWord;
+    size_t lengthstrmax, ibuff, iwork, lengthword;
     list lwords;
 
 public:
-    Alphabet(const char* name);
-    ~Alphabet();
+    alphabet(const char* name);
+    ~alphabet();
 
     void openisfile();
     void printfile();
     void filetoarray();
-    unsigned char* getPtrBuffer();
+    unsigned char* getptrbuffer();
     void printarray();
     void deletepuncmark();
     void tolower_();
