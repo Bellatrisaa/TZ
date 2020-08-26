@@ -1,24 +1,17 @@
-#include "alphabet.h"
-#include <locale.h>
-#include <string>
+#include "Alphabet.h"
+#include <cstdlib>
 #include <iostream>
-using namespace std;  
 
-int main(int argv, char** argc)
+int main(int argc, char **argv)
 {
-    setlocale(LC_ALL, "RUS");
-    string sf; 
-	printf("\n      ¬ведите название txt файла с исходными данными: ");  	
-	getline(cin,sf);
-	sf=sf+".txt";
-    alphabet text(sf.c_str());
-    text.openisfile();
-    text.filetoarray();
-    text.deletepuncmark();
-    text.tolower_();
-    text.sort();
-    text.show();
-    text.tofile("output.txt");
-    system("pause");
-    return 0;
+	//if (argc != 2) { std::cerr << "Second argument doesn't exist.\n"; abort(); }
+
+	setlocale(LC_ALL, "RUS");
+
+	Alphabet alph("file.txt");
+
+	alph.show();
+	alph.toFile();
+
+	return EXIT_SUCCESS;
 }

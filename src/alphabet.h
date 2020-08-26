@@ -1,27 +1,34 @@
 #pragma once
-#include "singleList.h"
-#include <fstream>
 
-class alphabet {
-    std::ifstream inputtext;
-    std::ofstream outputtext;
-    unsigned char* buffer;
-    char sym;
-    size_t lengthstrmax, ibuff, iwork, lengthword;
-    list lwords;
+#include <vector>
+#include <forward_list>
+#include <string>
+
+
+class Alphabet
+{
+	typedef std::vector<std::string>          Buffer;
+	typedef std::forward_list<std::string>    SortedWords;
+
+	Buffer       buffer;
+	SortedWords  *words;
 
 public:
-    alphabet(const char* name);
-    ~alphabet();
+	explicit Alphabet(const char* path);
 
-    void openisfile();
-    void printfile();
-    void filetoarray();
-    unsigned char* getptrbuffer();
-    void printarray();
-    void deletepuncmark();
-    void tolower_();
-    void sort();
-    void show();
-    void tofile(const char* name);
+	~Alphabet() { if (!words) delete words; }
+
+	void show() const;
+
+	void toFile() const;
+
+private:
+	inline std::string getClearString(const std::string& dirtyString) const;
+
+	inline std::string stringToLower(std::string& string) const;
+
+	void setWordsInList();
+
+	void loadingEmulation() const;
+
 };
