@@ -18,6 +18,7 @@ Alphabet::Alphabet(const char* path) : words(nullptr)
 
 	if (fin.is_open())
 	{
+		system("CLS");
 		std::cout << "Copy text from " << path; loadingEmulation();
 
 		std::string str;
@@ -49,7 +50,7 @@ Alphabet::Alphabet(const char* path) : words(nullptr)
 
 void Alphabet::show() const
 {
-	std::cout << "Alphabet Words:" << std::endl << std::endl;
+	std::cout << "\nAlphabet Words:" << std::endl << std::endl;
 	for (const auto& el : *words)
 	{
 		std::cout << el << std::endl;
@@ -107,7 +108,7 @@ void Alphabet::toFile() const
 			fout << Cp1251_to_utf8(temp.c_str());
 		}
 
-		std::cout << "\nWords written to file output.txt\n";
+		std::cout << "\nWords written to output.txt\n";
 
 		fout.close();
 
