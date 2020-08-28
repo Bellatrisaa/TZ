@@ -32,7 +32,4 @@ private:
 	inline std::string stringToLower(std::string& string) const;
 
 	void setWordsInList();
-
-	void loadingEmulation() const;
-
 };

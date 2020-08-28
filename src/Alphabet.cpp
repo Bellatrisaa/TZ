@@ -18,7 +18,7 @@ Alphabet::Alphabet(const char* path) : words(nullptr)
 	std::ifstream fin(path);
 
 	if (fin.is_open()) {
-		std::cout << "Copy text from " << path; loadingEmulation();
+		std::cout << "Copy text from " << path;
 
 		std::string str;
 		while (std::getline(fin, str)) { 
@@ -62,7 +62,7 @@ std::string Alphabet::getClearString(const std::string &dirtyString) const
 		return static_cast<uint> (static_cast<uchar> (ch)) == 32 
 				|| isalpha(static_cast<uint> (static_cast<uchar> (ch)));
 	});
-
+    
 	return clearString;
 }
 
@@ -108,18 +108,4 @@ void Alphabet::toFile() const
 	} else {
 		std::cerr << "Output file is not found\n";
 	}
-}
-
-void Alphabet::loadingEmulation() const
-{
-	std::this_thread::sleep_for(std::chrono::seconds(1));
-	std::cout << '.';
-
-	std::this_thread::sleep_for(std::chrono::seconds(1));
-	std::cout << '.';
-
-	std::this_thread::sleep_for(std::chrono::seconds(1));
-	std::cout << '.';
-
-	system("CLS");
 }
