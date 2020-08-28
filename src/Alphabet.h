@@ -16,7 +16,11 @@ class Alphabet
 public:
 	explicit Alphabet(const char* path);
 
-	~Alphabet() { if (!words) delete words; }
+	~Alphabet() { 
+		if (!words) {
+			delete words; 
+		}
+	}
 
 	void show() const;
 
