@@ -103,9 +103,7 @@ void Alphabet::toFile() const
         fout.close();
 
         std::cout << "\nWords written to output.txt\n";
-
-        system("output.txt");
     } else {
-        std::cerr << "Output file is not found\n";
+        std::cerr << "Output file is not open\n";
     }
 }
