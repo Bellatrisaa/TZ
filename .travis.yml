@@ -1,5 +1,5 @@
 language: cpp
-os: windows
+os: linux
 compiler: g++
 dist: xenial
 
