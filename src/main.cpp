@@ -16,5 +16,7 @@ int main(int argc, char** argv)
     alph.show();
     alph.toFile();
 
+    system("output.txt");
+
     return EXIT_SUCCESS;
 }
