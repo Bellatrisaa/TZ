@@ -5,7 +5,7 @@ TEST_LIB_DIR = third-party/
 cflags = -Wall -Werror
 comp = g++
 src = $(SRC_DIR)main.cpp $(SRC_DIR)convert.cpp $(SRC_DIR)Alphabet.cpp
-tests = $(TEST_DIR)main.cpp $(TEST_DIR)methods_test.cpp $(TEST_DIR)convert_test.cpp
+tests = $(TEST_DIR)main.cpp $(SRC_DIR)Alphabet.cpp $(TEST_DIR)methods_test.cpp $(TEST_DIR)convert_test.cpp $(TEST_DIR)global_test.cpp
 
 .PHONY: release app clean tests
 

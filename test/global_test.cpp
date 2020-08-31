@@ -1,4 +1,3 @@
-#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "Alphabet.h"
 #include <string.h>
@@ -7,14 +6,11 @@
 
 TEST_CASE("[main]", "Main Function")
 {
-
-    setlocale(LC_ALL, "RUS");
-
     Alphabet alph("test_input.txt");
 
     alph.toFile();
    
-	bool result = true;
+    bool result = true;
     char ch_1[30], ch_2[30];
 
     FILE* file_1;
